@@ -1,0 +1,121 @@
+package com.frxs.dispatch.activity;
+
+import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.design.widget.TextInputLayout;
+import android.text.TextUtils;
+import android.widget.Button;
+import android.widget.EditText;
+
+import com.frxs.core.utils.InputUtils;
+import com.frxs.core.utils.ToastUtils;
+import com.frxs.dispatch.MyApplication;
+import com.frxs.dispatch.R;
+import com.frxs.dispatch.model.UserInfo;
+import com.frxs.dispatch.rest.model.AjaxParams;
+import com.frxs.dispatch.rest.model.ApiResponse;
+import com.frxs.dispatch.rest.service.rxjava.BaseObserver;
+import com.frxs.dispatch.rest.service.rxjava.RxSchedulers;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+/**
+ * <pre>
+ *     author : ewu
+ *     e-mail : xxx@xx
+ *     time   : 2017/03/29
+ *     desc   : xxxx描述
+ *     version: 1.0
+ * </pre>
+ */
+public class LoginActivity extends MyBaseActivity {
+
+
+    @BindView(R.id.user_name_et)
+    EditText userNameEt;
+    @BindView(R.id.user_name_layout)
+    TextInputLayout userNameLayout;
+    @BindView(R.id.password_et)
+    EditText passwordEt;
+    @BindView(R.id.password_layout)
+    TextInputLayout passwordLayout;
+    @BindView(R.id.login_btn)
+    Button loginBtn;
+
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_login);
+        ButterKnife.bind(this);
+
+        iniData();
+    }
+
+    protected void iniData() {
+        userNameLayout.setHint(getResources().getString(R.string.user_name));
+        passwordLayout.setHint(getResources().getString(R.string.password));
+        String account = MyApplication.getInstance().getUserAccount();
+        if (!TextUtils.isEmpty(account)) {
+            userNameEt.setText(account);
+            userNameEt.setSelection(userNameEt.length());
+        }
+    }
+
+    @OnClick(R.id.login_btn)
+    public void onClick() {
+        String username = userNameLayout.getEditText().getText().toString();
+        String password = passwordLayout.getEditText().getText().toString();
+        if (TextUtils.isEmpty(username)) {
+            userNameLayout.setError(getString(R.string.tips_null_account));
+            userNameEt.requestFocus();
+        } else if (TextUtils.isEmpty(password)) {
+            passwordLayout.setError(getString(R.string.tips_null_password));
+            passwordEt.requestFocus();
+        } else {
+            if (InputUtils.isNumericOrLetter(password)) {
+                userNameLayout.setErrorEnabled(false);
+                passwordLayout.setErrorEnabled(false);
+                requestLogin(username, password);
+            } else {
+                passwordLayout.setError(getString(R.string.tips_input_limit));
+                passwordEt.requestFocus();
+            }
+        }
+    }
+
+    private void requestLogin(final String strUserName, String strPassWord) {
+        AjaxParams params = new AjaxParams();
+        params.put("UserAccount", strUserName);
+        params.put("UserPwd", strPassWord);
+        params.put("UserType", "7");// 7 调度
+
+        getService().UserLogin(params.getUrlParams())
+                .compose(RxSchedulers.compose(this, true))
+                .subscribe(new BaseObserver<UserInfo>() {
+                    @Override
+                    public void onResponse(ApiResponse<UserInfo> result) {
+                        if (result.getFlag().equals("0")) {
+                            ToastUtils.show(LoginActivity.this, "登录成功");
+                            MyApplication application = MyApplication.getInstance();
+                            application.setUserAccount(strUserName);
+
+                            UserInfo userInfo = result.getData();
+                            if (null != userInfo) {
+                                application.setUserInfo(userInfo);
+
+                                gotoActivity(HomeActivity.class, true);
+                            }
+                        } else {
+                            ToastUtils.show(LoginActivity.this, result.getInfo());
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Throwable t) {
+                        super.onFailure(t);
+                    }
+                });
+    }
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#606060</color>
+    <color name="themeColor">#e50112</color>
+    <color name="dividerColor">#dfdfdf</color>
+    <color name="yellow_light">#fefff1</color>
+    <color name="transparent">#00000000</color>
+    <color name="hint_text_color">#8d8d8d</color>
+
+    <color name="frxs_white">#ffffff</color>
+    <color name="frxs_red">#e60012</color>
+    <color name="frxs_red_light">#fe0000</color>
+    <color name="frxs_black_dark">#333333</color>
+    <color name="frxs_black_light">#666666</color>
+    <color name="frxs_black">#303030</color>
+    <color name="frxs_gray_dark">#dfdfdf</color>
+    <color name="frxs_gray_light">#f8f8f8</color>
+    <color name="frxs_gray">#5f5f5f</color>
+
+</resources>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        style="@style/ActionBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/frxs_red">
+
+        <include layout="@layout/view_title" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5px"
+        android:background="@color/frxs_gray_dark"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/half_capsule_user_info">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/old_password_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/row_margin"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/old_password_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/ic_password"
+                    android:drawablePadding="5dp"
+                    android:inputType="textPassword"
+                    android:hint="@string/hint_old_password" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/new_pw_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/row_margin"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/new_pw_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/ic_password"
+                    android:drawablePadding="5dp"
+                    android:inputType="textPassword"
+                    android:hint="@string/hint_new_password" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/repeat_new_pw_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/row_margin"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/repeat_new_pw_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/ic_password"
+                    android:drawablePadding="5dp"
+                    android:inputType="textPassword"
+                    android:hint="@string/hint_repeat_new_password" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/confirm_btn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="@dimen/row_margin"
+                android:background="@drawable/selector_capsule_btn"
+                android:textSize="@dimen/font_larger"
+                android:textColor="@android:color/white"
+                android:text="@string/confirm" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

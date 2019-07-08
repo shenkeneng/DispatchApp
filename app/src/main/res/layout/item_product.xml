@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_bg_item">
+
+    <TextView
+        android:id="@+id/supplier_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="供应商名称"
+        android:textSize="@dimen/order_info"
+        android:textColor="@color/hint_text_color"
+        android:layout_margin="@dimen/common_margin"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/frxs_gray_dark"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginRight="@dimen/common_margin"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/product_name_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/order_info"
+                android:textColor="@color/frxs_black_dark"
+                android:text="商品名称"/>
+
+            <com.kyleduo.switchbutton.SwitchButton
+                android:id="@+id/received_switch_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:paddingTop="@dimen/common_margin"
+                android:paddingBottom="@dimen/common_margin"
+                app:kswBackColor="@color/custom_text_state_color"
+                app:kswTextOff="@string/received"
+                app:kswTextOn="@string/unreceived"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/frxs_gray_dark"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/common_margin"
+            android:layout_marginBottom="@dimen/common_margin"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.3"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/product_code_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/product_code"
+                    android:textSize="@dimen/fab_margin"/>
+
+                <TextView
+                    android:id="@+id/product_barcode_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/product_barcode"
+                    android:textSize="@dimen/fab_margin"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.7"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/product_location_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/product_location"
+                    android:textSize="@dimen/fab_margin"/>
+
+                <TextView
+                    android:id="@+id/product_package_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/product_package_num"
+                    android:textSize="@dimen/fab_margin"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/product_num_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="@string/product_num"
+                android:textSize="@dimen/order_info"
+                android:textColor="@color/themeColor"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

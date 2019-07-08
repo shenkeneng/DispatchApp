@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_bg_item"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/dividerColor" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/common_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/shop_name_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="门店名称"
+                    android:textColor="@color/frxs_black_dark"
+                    android:textSize="@dimen/font_larger" />
+
+                <TextView
+                    android:id="@+id/order_status_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/status_normal"
+                    android:textColor="@color/frxs_black_dark"
+                    android:textSize="@dimen/font_larger"
+                    android:layout_marginLeft="@dimen/common_margin"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/dividerColor" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/common_margin"
+                    android:layout_marginLeft="@dimen/common_margin"
+                    android:layout_marginTop="@dimen/common_margin"
+                    android:layout_weight="2.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/order_id_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/order_no"
+                        android:textSize="@dimen/font_large" />
+
+                    <TextView
+                        android:id="@+id/order_line_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/order_line"
+                        android:textSize="@dimen/font_large" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/common_margin"
+                    android:layout_marginTop="@dimen/common_margin"
+                    android:layout_marginLeft="@dimen/common_margin"
+                    android:layout_weight="1.7"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/order_amount_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/order_amount"
+                        android:textSize="@dimen/font_large" />
+
+                    <TextView
+                        android:id="@+id/order_station_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/order_station"
+                        android:textSize="@dimen/font_large" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/dividerColor" />
+
+                <TextView
+                    android:id="@+id/order_delivery_no_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="9999"
+                    android:textStyle="bold"
+                    android:textColor="@color/themeColor"
+                    android:textSize="@dimen/font_max" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/menu_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#4d000000"
+            android:gravity="center"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/action_top_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.coorchice.library.SuperTextView
+                    android:id="@+id/action_top_view"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:gravity="center"
+                    android:text="@string/action_top"
+                    app:corner="35dp"
+                    app:pressBgColor="@color/frxs_red"
+                    app:pressTextColor="@color/frxs_white"
+                    app:solid="@color/frxs_white"
+                    app:stroke_color="@color/dividerColor"
+                    app:stroke_width="1dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/action_bottom_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.coorchice.library.SuperTextView
+                    android:id="@+id/action_bottom_view"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:gravity="center"
+                    android:text="@string/action_bottom"
+                    app:corner="35dp"
+                    app:pressBgColor="@color/frxs_red"
+                    app:pressTextColor="@color/frxs_white"
+                    app:solid="@color/frxs_white"
+                    app:stroke_color="@color/dividerColor"
+                    app:stroke_width="1dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/action_pause_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.coorchice.library.SuperTextView
+                    android:id="@+id/action_pause_view"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:gravity="center"
+                    android:text="@string/action_pause"
+                    app:corner="35dp"
+                    app:pressBgColor="@color/frxs_red"
+                    app:pressTextColor="@color/frxs_white"
+                    app:solid="@color/frxs_white"
+                    app:stroke_color="@color/dividerColor"
+                    app:stroke_width="1dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/dividerColor" />
+
+    <TextView
+        android:id="@+id/order_area_status_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/common_margin"
+        android:textSize="@dimen/font_normal"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/dividerColor" />
+</LinearLayout>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_bg_item"
+    android:orientation="horizontal"
+    android:id="@+id/ll_order">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/shop_name_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingBottom="@dimen/spacing_normal"
+                android:paddingTop="@dimen/spacing_normal"
+                android:text="门店名称"
+                android:textColor="@color/frxs_black_dark"
+                android:textSize="@dimen/font_large" />
+
+            <TextView
+                android:id="@+id/order_status_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_normal"
+                android:layout_marginRight="@dimen/spacing_normal"
+                android:padding="5dp"
+                android:text="正在拣货"
+                android:textColor="@color/frxs_red"
+                android:textSize="@dimen/font_large" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/dividerColor" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/spacing_normal"
+            android:paddingRight="@dimen/spacing_normal">
+
+            <TextView
+                android:id="@+id/order_amount_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingTop="@dimen/common_padding"
+                android:text="111111111111111111"
+                android:textSize="@dimen/font_large"
+                android:textColor="@android:color/darker_gray"/>
+
+            <TextView
+                android:id="@+id/order_station_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_margin"
+                android:text="@string/order_station"
+                android:textColor="@color/frxs_red"
+                android:textSize="@dimen/font_large" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/spacing_normal">
+
+            <TextView
+                android:id="@+id/order_shop_address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="11111"
+                android:textSize="@dimen/font_large"
+                android:textColor="@color/custom_text_state_color"
+                android:paddingRight="@dimen/common_margin"
+                android:paddingBottom="@dimen/common_padding"
+                android:paddingTop="@dimen/common_padding"
+                android:paddingLeft="@dimen/spacing_normal"/>
+
+            <TextView
+                android:id="@+id/order_date_cb"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="1111111111"
+                android:textSize="@dimen/font_large"
+                android:textColor="@color/frxs_black_dark"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginBottom="@dimen/common_padding"
+            android:background="@color/dividerColor"
+            android:paddingLeft="@dimen/spacing_normal"
+            android:paddingRight="@dimen/spacing_normal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/spacing_normal"
+            android:paddingLeft="@dimen/spacing_normal"
+            android:paddingRight="@dimen/spacing_normal">
+
+            <TextView
+                android:id="@+id/order_line_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/order_line"
+                android:textSize="@dimen/font_large"
+                android:textColor="@android:color/darker_gray"/>
+
+            <TextView
+                android:id="@+id/order_deliver_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_margin"
+                android:text="@string/deliver_info"
+                android:textColor="@color/frxs_black_dark"
+                android:textSize="@dimen/font_large" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@mipmap/icon_right_on"
+        android:padding="@dimen/common_padding"/>
+
+</LinearLayout>

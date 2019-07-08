@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Core</string>
+
+    <string name="progress_dialog">正在努力读取数据，请稍后......</string>
+    <string name="loading">加载中...</string>
+    <string name="tips_pageending">已经是最后一页了</string>
+
+    <!--QuantityView-->
+    <string name="qv_add">+</string>
+    <string name="qv_remove">-</string>
+    <string name="max_upper_limit_prompt">上限值是</string>
+    <string name="min_lower_limit_prompt">下限值是</string>
+    <string name="invalid_num_prompt">请输入有效的数字</string>
+
+    <string name="read_more">展开</string>
+    <string name="read_less">收缩</string>
+
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_tv"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:drawablePadding="@dimen/spacing_tiny"
+    android:textColor="@color/custom_text_state_color"
+    android:textSize="@dimen/font_large"
+    android:background="@drawable/selector_r_gray_red_stroke"
+    android:layout_margin="@dimen/spacing_large"
+    android:padding="@dimen/spacing_tiny"/>
+

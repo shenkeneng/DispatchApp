@@ -1,0 +1,150 @@
+<resources>
+    <string name="app_name">调度HD</string>
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+    <string name="close">关闭</string>
+    <!-- 在线更新 -->
+    <string name="updade_content">最新版本：%1$s \n\n更新内容\n%2$s</string>
+    <string name="update_title">发现版本更新</string>
+    <string name="update_ok">立即更新</string>
+    <string name="update_cancel">稍后更新</string>
+
+    <!--网络请求提示-->
+    <string name="network_request_failed">网络请求失败，请重试</string>
+
+    <!--HomeActivity-->
+    <string name="order_in_order">排单顺序</string>
+    <string name="assign_deliver">指派配送员</string>
+    <string name="button_load">一键装车</string>
+    <string name="order_track">订单跟踪</string>
+    <string name="delivery_statistics">发货统计</string>
+    <string name="dispatcher">调度员：%1$s</string>
+    <string name="good_details">商品详情</string>
+
+    <!--LoginActivity-->
+    <string name="user_name">用户名</string>
+    <string name="password">密码</string>
+    <string name="login">登录</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="tips_login_info">用户名或密码错误</string>
+    <string name="tips_null_account">您还没有填写账号</string>
+    <string name="tips_null_password">您还没有填写密码</string>
+    <string name="tips_input_limit">密码只能由数字、字母组成</string>
+    <string name="tips_new_password_error">新密码确认错误</string>
+
+    <!--OrderInOrderActivity-->
+    <string name="status_normal">正常</string>
+    <string name="order_no">订单：%1$s</string>
+    <string name="order_amount">金额：%1$.2f</string>
+    <string name="order_line">线路：%1$s</string>
+    <string name="order_station">待装区：%1$d</string>
+    <string name="action_top">置顶</string>
+    <string name="action_bottom">置底</string>
+    <string name="action_pause">暂停</string>
+    <string name="action_resume">恢复</string>
+    <string name="confirm_4_order">确认将订单发货顺序%1$s</string>
+    <string name="search_hint">请输入%1$s</string>
+
+    <!--AssignDeliverActivity-->
+    <string name="today">今天</string>
+    <string name="yesterday">昨天</string>
+    <string name="the_day_before_yesterday">前天</string>
+    <string name="in_the_first_seven_days">前七天</string>
+    <string name="date_all">全部</string>
+    <string name="all_order">全部订单</string>
+    <string name="unassign_deliver_order">未分配配送员</string>
+    <string name="assign_deliver_order">已分配配送员</string>
+    <string name="clear_deliver">清空配送员</string>
+    <string name="key_deliver">配送员：</string>
+    <string name="key_delivery_order">第%1$d车</string>
+    <string name="deliver_info">配送员：%1$s 第%2$d车</string>
+    <string name="order_amount_point">金额:%1$.2f/绩效分:%2$.2f</string>
+    <string name="confirm_clear_deliver">是否确认清空配送员？</string>
+    <string name="tips_order_shipping_user_name">订单【%1$s】未指派配送员无需请求，请刷新重试</string>
+
+    <!--UpdatePswActivity-->
+    <string name="title_update_pwd">修改密码</string>
+    <string name="hint_old_password">请输入原密码</string>
+    <string name="hint_new_password">请输入新密码</string>
+    <string name="hint_repeat_new_password">请再次输入新密码</string>
+
+    <!--MineActivity-->
+    <string name="title_mine">用户设置</string>
+
+    <!--DeliveryStatisticsActivity-->
+    <string name="delivery_date">预计配送日期：%1$s</string>
+    <string name="sum_order_shop_num"><Data><![CDATA[ 今日应报单门店总数：<font color="#e60012">%1$s家</font>]]></Data></string>
+    <string name="no_order_shop_num"><Data><![CDATA[ 今日未报单门店数：<font color="#e60012">%1$s家</font>]]></Data></string>
+    <string name="c_status">状态</string>
+    <string name="c_shop_num">门店数</string>
+    <string name="c_order_amount">预定金额</string>
+    <string name="c_delivery_amount">实发金额</string>
+    <string name="c_oos_amount">缺货金额</string>
+    <string name="select_all">全选</string>
+    <string name="total_order">合计%1$d个订单</string>
+    <string name="selected_order_total">勾选数据合计：</string>
+    <string name="total_shop_num">门店数%1$d个</string>
+    <string name="delivery_amount">实发金额：%1$s</string>
+    <string name="oos_amount">缺货金额：%1$s</string>
+
+    <!--BottomTabActivity-->
+    <string name="receiving">正在收货</string>
+    <string name="pending_receive_order">等待收货订单：%1$d个</string>
+    <string name="receiving_order">正在收货订单</string>
+    <string name="receiving_product_list">正在收货商品清单</string>
+    <string name="finish_receive">完成收货</string>
+    <string name="total_product_row">商品总行数：%1$d</string>
+    <string name="total_product_num">商品总数量：%1$s</string>
+    <string name="received_product_num">已收货：%1$s</string>
+    <string name="start_receive">开始收货</string>
+    <string name="product_code">编码：%1$s</string>
+    <string name="product_barcode">%1$s</string>
+    <string name="product_location">货位号：%1$s</string>
+    <string name="product_package_num">包装数：%1$.2f</string>
+    <string name="unreceived">未收货</string>
+    <string name="received">已收货</string>
+    <string name="product_num">%1$d件</string>
+    <string name="logout">退出当前账号</string>
+    <string name="receipt_details">收货明细</string>
+    <string name="update_password">修改密码</string>
+    <string name="version_id">版本号</string>
+    <string name="exit_query">是否退出账号？</string>
+    <string name="search_order_prompt">输入订单编号、供应商编号、供应商名称</string>
+    <string name="search_product_prompt">输入商品名称、商品条码、编码</string>
+    <string name="remark">备注</string>
+    <string name="change_quantity">修改数量</string>
+    <string name="user_name_key">姓名：</string>
+    <string name="TEL">TEL：</string>
+    <string name="version">Ver %1$s</string>
+
+    <string name="order_num_0">订单数量：%1$s</string>
+    <string name="order_num_1">订单数量：%1$s%2$s</string>
+    <string name="package_num">  包装数：%1$s</string>
+    <string name="actual_received_num_key">实收数量：</string>
+    <string name="switch_unit">切换单位</string>
+    <string name="modify_receiving_status">请先修改收货状态</string>
+
+    <string name="scan">扫一扫</string>
+    <string name="hasCameraPermission">收货应用需要相机权限</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!--OrderTrackActivity-->
+    <string name="wait_pick">等待拣货</string>
+    <string name="being_pick">正在拣货</string>
+    <string name="wait_check">等待装箱</string>
+    <string name="wait_delivery">等待配送</string>
+    <string name="being_delivery">正在配送</string>
+    <string name="finish">交易完成</string>
+    <string name="orders_info">订单数量：%1$d，门店数量：%2$d，金额：%3$s</string>
+    <string name="order_delivery">配送员：%1$s</string>
+
+    <!--OrderDetailsActivity-->
+    <string name="good_qty">数量：%1$s%2$s</string>
+    <string name="good_amt">价格：%1$s</string>
+    <string name="good_code">编码：%1$s</string>
+
+</resources>

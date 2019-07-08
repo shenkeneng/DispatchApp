@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:padding="@dimen/spacing_normal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_large"
+            android:text="@string/key_deliver"/>
+
+        <com.frxs.dispatch.widget.BetterSpinner
+            android:id="@+id/deliver_sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/spacing_normal"
+            android:padding="@dimen/spacing_small"
+            android:textSize="@dimen/font_large"
+            android:hint="请选择配送员"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_normal"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/delivery_order_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="车次："
+            android:textSize="@dimen/font_large"/>
+
+        <TextView
+            android:id="@+id/delivery_number1_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_small"
+            android:background="@drawable/selector_r_gray_red_stroke"
+            android:padding="@dimen/spacing_small"
+            android:textColor="@color/custom_text_state_color"
+            android:textSize="@dimen/font_large"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/delivery_number2_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_small"
+            android:background="@drawable/selector_r_gray_red_stroke"
+            android:padding="@dimen/spacing_small"
+            android:textColor="@color/custom_text_state_color"
+            android:textSize="@dimen/font_large"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_large"
+        android:orientation="horizontal">
+
+        <com.coorchice.library.SuperTextView
+            android:id="@+id/cancel_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/spacing_small"
+            android:layout_marginLeft="@dimen/spacing_huge"
+            android:layout_marginRight="@dimen/spacing_normal"
+            app:pressBgColor="@color/frxs_red"
+            app:pressTextColor="@color/frxs_white"
+            app:stroke_color="@color/dividerColor"
+            app:stroke_width="1dp"
+            app:corner="@dimen/common_padding"
+            android:text="@string/cancel"
+            android:textSize="@dimen/font_normal"/>
+
+        <com.coorchice.library.SuperTextView
+            android:id="@+id/confirm_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/spacing_normal"
+            android:layout_marginRight="@dimen/spacing_huge"
+            android:padding="@dimen/spacing_small"
+            app:pressBgColor="@color/frxs_red"
+            app:pressTextColor="@color/frxs_white"
+            app:stroke_color="@color/dividerColor"
+            app:stroke_width="1dp"
+            app:corner="@dimen/common_padding"
+            android:text="@string/confirm"
+            android:textSize="@dimen/font_normal"/>
+
+    </LinearLayout>
+</LinearLayout>

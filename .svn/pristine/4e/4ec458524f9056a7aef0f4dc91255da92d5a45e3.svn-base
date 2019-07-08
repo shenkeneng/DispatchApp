@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/icon_bg_pop"
+    android:orientation="vertical"
+    android:layout_marginRight="45dp"
+    android:gravity="center">
+
+    <ListView
+        android:id="@+id/lv_unit"
+        android:layout_height="wrap_content"
+        app:layout_widthPercent="23%"
+        android:scrollbars="none"
+        android:listSelector="@android:color/transparent"
+        android:paddingTop="8dp"
+        android:divider="@color/dividerColor"
+        android:dividerHeight="1dp"/>
+
+</android.support.percent.PercentRelativeLayout>

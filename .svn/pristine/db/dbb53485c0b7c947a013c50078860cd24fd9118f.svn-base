@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        style="@style/ActionBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/frxs_red">
+
+        <include layout="@layout/view_title" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/filter_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/shape_bg_item">
+
+        <LinearLayout
+            android:id="@+id/date_choose_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/date_choose_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/spacing_small"
+                android:drawableRight="@mipmap/navi_down"
+                android:gravity="center"
+                android:padding="@dimen/spacing_normal"
+                android:text="今天"
+                android:textSize="@dimen/font_large"
+                android:textColor="@color/frxs_black_light"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/spacing_small"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:background="@color/dividerColor" />
+
+        <LinearLayout
+            android:id="@+id/status_choose_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/status_choose_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/spacing_small"
+                android:drawableRight="@mipmap/navi_down"
+                android:gravity="center"
+                android:padding="@dimen/spacing_normal"
+                android:text="全部订单"
+                android:textSize="@dimen/font_large"
+                android:textColor="@color/frxs_black_light"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/dividerColor" />
+
+        <include layout="@layout/view_search_list" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_assign_delivery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@drawable/shape_bg_item"
+        android:paddingRight="@dimen/spacing_normal">
+
+        <CheckBox
+            android:id="@+id/check_all_ck"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingRight="@dimen/common_margin"
+            android:text="@string/select_all"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/spacing_normal"
+            android:paddingTop="@dimen/spacing_normal"
+            android:paddingBottom="@dimen/spacing_normal"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/total_selected_order_num_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/total_order" />
+
+            <TextView
+                android:id="@+id/total_selected_order_amt_point_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/order_amount_point" />
+        </LinearLayout>
+
+        <com.coorchice.library.SuperTextView
+            android:id="@+id/assign_deliver_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/spacing_normal"
+            android:gravity="center"
+            android:paddingBottom="@dimen/spacing_small"
+            android:paddingLeft="@dimen/common_padding"
+            android:paddingRight="@dimen/common_padding"
+            android:paddingTop="@dimen/spacing_small"
+            android:text="@string/assign_deliver"
+            android:textSize="@dimen/font_normal"
+            app:corner="@dimen/common_padding"
+            app:pressBgColor="@color/frxs_red"
+            app:pressTextColor="@color/frxs_white"
+            app:stroke_color="@color/dividerColor"
+            app:stroke_width="1dp" />
+
+        <com.coorchice.library.SuperTextView
+            android:id="@+id/clear_deliver_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="@dimen/spacing_small"
+            android:paddingLeft="@dimen/common_padding"
+            android:paddingRight="@dimen/common_padding"
+            android:paddingTop="@dimen/spacing_small"
+            android:text="@string/clear_deliver"
+            android:textSize="@dimen/font_normal"
+            app:corner="@dimen/common_padding"
+            app:pressBgColor="@color/frxs_red"
+            app:pressTextColor="@color/frxs_white"
+            app:stroke_color="@color/dividerColor"
+            app:stroke_width="1dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f7f7f7"
+        android:paddingTop="@dimen/spacing_large"
+        android:paddingRight="@dimen/spacing_normal"
+        android:paddingBottom="@dimen/spacing_large">
+
+        <ImageView
+            android:id="@+id/person_zone_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/spacing_large"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/set_up"/>
+
+        <TextView
+            android:id="@+id/user_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/ic_big_head_portrait"
+            android:drawablePadding="@dimen/spacing_huge"
+            android:padding="@dimen/spacing_huge"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/font_larger"
+            android:textColor="@color/frxs_black_dark"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/dividerColor" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/module_enter_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/spacing_large"/>
+
+</LinearLayout>
